@@ -1,28 +1,8 @@
 # 📚 Semantic Book Recommender
 
-An LLM-powered book recommendation system that helps users discover their next favorite read by understanding **what they want to feel**, **what topics they’re interested in**, and **how they describe their ideal book**.
-
 > 🧠 Powered by NLP, vector databases, and sentiment-aware filtering — all wrapped in an intuitive Gradio dashboard.
 
----
-## 📑 Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Tech Stack](#tech-stack)
-3. [Functional Components](#functional-components)
-4. [Preparing the Text Data](#1️⃣-preparing-the-text-data)
-5. [Vector Search](#2️⃣-vector-search)
-6. [Text Classification (Category Prediction)](#3️⃣-text-classification-category-prediction)
-7. [Sentiment Analysis](#4️⃣-sentiment-analysis)
-8. [Gradio Dashboard](#5️⃣-gradio-dashboard)
-9. [Example Query](#example-query)
-10. [Folder Structure](#folder-structure)
-11. [Environment Setup](#environment-setup)
-12. [Models Used](#models-used)
-13. [Future Improvements](#future-improvements)
-14. [Author](#author)
-15. [License](#license)
-16. [Questions or Feedback](#questions-or-feedback)
+An LLM-powered book recommendation system that helps users discover their next favorite read by understanding **what they want to feel**, **what topics they’re interested in**, and **how they describe their ideal book**.
 
 ---
 ## 🚀 Project Overview
@@ -37,7 +17,23 @@ This project leverages **Large Language Models (LLMs)** to understand a user’s
 - ✅ Unified UI with Gradio
 
 ---
+## 📊 Dataset
 
+The dataset used in this project comes from [Kaggle - 7K Books with Metadata](https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata), which provides over 7,000 books along with metadata such as:
+
+- Title
+- Author
+- Description
+- Genre/Category
+- Page count
+- Publication date
+- Ratings
+
+This dataset served as the foundational corpus for preparing textual descriptions, performing classification, embedding generation, and running semantic similarity queries using vector databases.
+
+> 📁 Note: Post-cleaning, approximately **5,000+ high-quality book entries** were retained for the recommender system.
+
+---
 ## 🛠 Tech Stack
 
 | Component | Tools |
@@ -91,10 +87,10 @@ This project leverages **Large Language Models (LLMs)** to understand a user’s
 
 ## 🧪 Example Query
 
-> *"I'm looking for a book about space and time travel that has a mysterious but hopeful tone."*
+> *"I'm looking for a book about space and time travel."*
 
-- ✨ **Returns** science fiction titles with aligned mood
-- ✅ Matches user-defined emotion and category
+- ✨ **Returns** science fiction titles
+- ✅ Matches user-defined emotion and category through interactive filters
 - 📚 Suggestions are grounded in vector similarity and LLM interpretation
 
 ---
@@ -103,16 +99,16 @@ This project leverages **Large Language Models (LLMs)** to understand a user’s
 
 ```bash
 ├── data/
+│   ├── cover-not-found.jpg
+│   ├── tagged_desc.txt
 │   ├── books_cleaned.csv
 │   ├── books_with_emotions.csv
 │   └── books_with_categories.csv
-├── recommender/
-│   ├── vector_search.py
-│   ├── classify_books.py
-│   ├── sentiment_analysis.py
+├── code-files/
+│   ├── data-exploration.ipynb
+│   ├── vector-search.ipynb
+│   ├── text_classification.ipynb
+│   ├── sentiment_analysis.ipynb
 │   ├── gradio_dashboard.py
-│   └── utils/
 ├── .env
-├── requirements.txt
 ├── README.md
-└── Semantic_Book_Recommender.ipynb
