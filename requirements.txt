@@ -1,0 +1,23 @@
+# necessary libraries
+pandas
+numpy
+matplotlib
+seaborn
+python-dotenv
+gradio
+
+# langchain dependencies
+langchain-community
+langchain-chroma
+langchain-openai
+
+# kaggle datasets
+kagglehub
+
+# NLP libraries
+transformers
+pytorch
+
+# IDE and notebooks
+notebook
+ipywidgets
