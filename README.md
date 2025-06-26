@@ -10,11 +10,11 @@ An LLM-powered book recommendation system that helps users discover their next f
 This project leverages **Large Language Models (LLMs)** to understand a user’s natural-language book query and recommend titles that match not only by content but also by **category** and **emotional tone**. It integrates semantic search, zero-shot classification, and emotion analysis to provide highly personalized recommendations.
 
 🧩 Core techniques:
-- ✅ Data preparation & feature cleaning
-- ✅ Vector similarity search via embeddings
-- ✅ Book category prediction via zero-shot classification
-- ✅ Sentiment extraction for mood-based filtering
-- ✅ Unified UI with Gradio
+- Data preparation & feature cleaning
+- Vector similarity search via embeddings
+- Book category prediction via zero-shot classification
+- Sentiment extraction for mood-based filtering
+- Unified UI with Gradio
 
 ---
 ## 📊 Dataset
@@ -112,3 +112,48 @@ This dataset served as the foundational corpus for preparing textual description
 │   ├── gradio_dashboard.py
 ├── .env
 ├── README.md
+├── requirements.txt
+```
+
+---
+## 🔐 Environment Setup
+
+### 1. Create the `.env` file:
+
+```sh
+OPENAI_API_KEY=your_key_here
+```
+
+### 2. Install dependencies:
+
+```sh
+pip install -r requirements.txt
+```
+
+### 3. Run the app:
+
+```sh
+python gradio_dashboard.py
+```
+
+---
+## 🧠 Future Improvements
+
+- Support for multi-language queries.
+- Real-time usage tracking with analytics dashboard.
+- Fine-tuned in-house emotion model.
+- GPU-accelerated backend with async I/O.
+
+---
+## 📚 References & Learning Resources
+
+This project was developed with insights and guidance from the following resources:
+
+1. [FreeCodeCamp: Semantic Search + RAG + LLMs - Full Project Walkthrough](https://youtu.be/Q7mS1VHm3Yw?si=54k6R6X9sYfozqCD)
+2. [Hugging Face Course: Zero-Shot Classification with Transformers](https://huggingface.co/learn/llm-course/chapter3/1?fw=pt)
+3. [Dataloop Model: `emotion-english-distilroberta-base`](https://dataloop.ai/library/model/j-hartmann_emotion-english-distilroberta-base/#performance)
+4. [Hugging Face Tasks: Zero-Shot Classification](https://huggingface.co/tasks/zero-shot-classification)
+5. [Langchain Official Docs](https://python.langchain.com/docs/introduction/)
+6. [Weaviate Docs: Understanding Vector Indexing](https://weaviate.io/developers/weaviate/concepts/vector-index)
+
+> These resources played a key role in helping structure, build, and fine-tune various parts of the pipeline including vector search, emotion tagging, and category classification using LLMs.
